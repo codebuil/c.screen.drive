@@ -49,7 +49,8 @@ void print(char* s){
 void teste(){
 	int n=0;
 	int nn=0;
-	for(n=0;n<80*26*2;n=n+2){
+
+for(n=0;n<80*26*2;n=n+2){
 		if(scr2[n]<32){
 printf(" ");
 		}
@@ -64,16 +65,25 @@ if(n==nn*160 && n!=0)printf("\r\n");
 int main()
 {
 	char *src =scr2; //(char *)0x000b8000L;
-	printf("\033c\033[44;30m");
+	printf("\033c\033[44;37m");
 	int x=0;
 	int y=0;
 	int n=0;
-	char hello[]="hello world\n";
+	char *hello[10];
+	hello[0]="x86";
+	hello[1]="8086";
+	hello[2]="80186";
+	hello[3]="80286";
+	hello[4]="80386";
+	hello[5]="80486";
+	hello[6]="ARM";
+	hello[7]="ARM7";
 	locate(0,0);
-	print(hello);
-	for(n=1;n<23;n++){
-		locate(n,n);
-		print("++++++");
+	
+	for(n=0;n<8;n++){
+		locate(n+1,n+1);
+		print(hello[n]);
+		
 }
 
 	teste();
