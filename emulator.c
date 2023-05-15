@@ -64,7 +64,7 @@ if(n==nn*160 && n!=0)printf("\r\n");
 int main()
 {
 	char *src =scr2; //(char *)0x000b8000L;
-	printf("\033c\033[42;30m");
+	printf("\033c\033[44;30m");
 	int x=0;
 	int y=0;
 	int n=0;
