@@ -46,26 +46,10 @@ void print(char* s){
 	}
 	locate(xxx,yyy);
 }
-void teste(){
-	int n=0;
-	int nn=0;
-
-for(n=0;n<80*26*2;n=n+2){
-		if(scr2[n]<32){
-printf(" ");
-		}
-		else{		
-			printf("%c",scr2[n]);
-		}
-nn=n/160;
-if(n==nn*160 && n!=0)printf("\r\n");
-	}
-}
-
-int main()
+void kernel_main()
 {
 	char *src =scr2; //(char *)0x000b8000L;
-	printf("\033c\033[44;37m");
+	
 	int x=0;
 	int y=0;
 	int n=0;
@@ -86,6 +70,28 @@ int main()
 		
 }
 
-	teste();
 	
+	
+}
+void teste(){
+	int n=0;
+	int nn=0;
+
+for(n=0;n<80*26*2;n=n+2){
+		if(scr2[n]<32){
+printf(" ");
+		}
+		else{		
+			printf("%c",scr2[n]);
+		}
+nn=n/160;
+if(n==nn*160 && n!=0)printf("\r\n");
+	}
+}
+int main()
+{	
+	printf("\033c\033[44;37m");
+	kernel_main();
+	teste();
+	return 0;
 }
