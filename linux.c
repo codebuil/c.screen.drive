@@ -58,7 +58,7 @@ printf(" ");
 			printf("%c",scr2[n]);
 		}
 nn=n/160;
-//if(n==nn*160 && n!=0)printf("\r\n");
+if(n==nn*160 && n!=0)printf("\r\n");
 	}
 }
 
